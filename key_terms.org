@@ -23,6 +23,9 @@ due to the speed and trajectory of superman being the man of steel. This is beca
 he would have to slow/stop to the same speed as Lois to catch her and then "rejump".
 He visually does not appear to be 'rejumping' and Lois isnt cut in half.  DONE!
 ** Non-Trivial Test question
+   :LOGBOOK:
+   CLOCK: [2018-05-14 Mon 10:50]--[2018-05-14 Mon 11:02] =>  0:12
+   :END:
 What would be the best way to describe Superman's flight
 
 
@@ -37,92 +40,93 @@ c. He levitates, he's an alien "HEELLLLLOOOO!"
 
 d. Why do I care about Superman again, he's in the D.C. universe ... so dark and terrible movies!
 
-Contrapositive
+Contrapositive: Switch the hypothesis and conclusion of a conditional statement
+ and negating both. ~q->~p
 
-Converse
+Converse: Switch the hypothesis and conclusion of a conditional statement. q->p
 
-inverse
+inverse: Negate the hypothesis and conclusion of a conditional statement. ~p->~q
 
-R: real numbers
+R: real numbers: The set of all numbers including rational and irrational numbers.
 
-Z: integers
+Z: integers: All whole numbers.
 
-Q: rational numbers
+Q: rational numbers: Any number that can be obtained by dividing two integers.
 
-predicate
+predicate: A boolean valued function (true, false)
 
-Domain
+Domain: The set of all possible inputs for a function .
 
-CoDomain
+CoDomain: The set of all possible outputs for a function.
 
-quantifier
+quantifier: Indicates the scope of the attatched term.
 
-antecedent
+antecedent: a term that logically precedes another.
 
-consequent
+consequent: the result of.
 
-Set
+Set: A collection of terms with no repeats.
 
-Fallacy
+Fallacy: an unsound or mistaken argument or belief
 
-biconditional
+biconditional: if and only if
 
-sufficient condition
+sufficient condition: if p then q (if p condition is met, then q happens/exists)
 
-necessary condition
+necessary condition: if not p then not q (if p condition is not met, then q cannot.
 
-~p
+~p: negation
 
-p ^ q
+p ^ q: and
 
-p V q
+p V q: or
 
-p XOR q
+p XOR q: exclusive or
 
-p == q
+p == q: comparison
 
-p -> q
+p -> q: conditional
 
-p <--> q
+p <--> q: biconditional
 
-Three dots in a triangle
+Three dots in a triangle: therefore 
 
-upside down A
+upside down A: all
 
-Backwards E
+Backwards E: exists
 
-union
+union: or
 
-intersection
+intersection: and
 
-Commutative laws
+Commutative laws: order of operations can be reordered. a + b = b + a
 
-associative laws
+associative laws: terms or factors can be associated in any way. a + (b + c) = (a + b) + c
 
-distributive laws
+distributive laws: a(b + c) = ab + ac
 
-identity laws
+identity laws: every thing is identical with itself. a = a
 
-negation laws
+negation laws: the opposite or "not" value
 
-double negative law
+double negative law: the negation of a negation is the original value ~(~p) = p
 
-idempotent laws
+idempotent laws: logically combining a term with itself will produce the same term. aa = a, a + a = a
 
-universal bound laws
+universal bound laws: a V u = u, a ^ 0 = 0
 
-De morgan's laws
+De morgan's laws: ~(ab) = ~a + ~b, ~(a + b) = ~a * ~b
 
-absorption laws
+absorption laws: a V (a ^ b) = a ^ (a V b) = a
 
-negations of t and c
+negations of t and c: ~t and ~c
 
-vacuously true
+vacuously true: all members of an empty set have a certain property.
 
-Modus Ponens
+Modus Ponens: method of affirming
 
-Modus Tollens
+Modus Tollens: mode that denies by denying
 
-Elimination: valid argument form
+Elimination: valid argument form: 
 
-Transitivity: Valid Argument form
+Transitivity: Valid Argument form: 
