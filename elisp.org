@@ -9,18 +9,43 @@ NOTE: Comment your code, and verify it works for "breaking cases" i.e. 0! = 1.
 * Factorial Code
 ** Code
 #+BEGIN_SRC emacs-lisp
-(+ 2 3 4)
+(defun factorial num
+   (setq partFactorial (* num (- num 1))))
+;   (if (> num 0)
+;        (factorial partFactorial))
 #+END_SRC
+ This code theoretically would call the factorial function recursively until it reaches 0 in
+ which case it would stop evaluating. it sets partFactorial equal to the number times the number
+ minus one, and then calls the factorial function with partFactorial being the input.
+#+RESULTS:
+: factorial
+
+#+BEGIN_SRC emacs-lisp
+(factorial 5) ; should evaluate to 120
+#+END_SRC
+
 ** Test cases
 ** How big a number will make your computer freeze?
 * "Real-World" function with mapcar
 ** What is mapcar
+ mapcar applies the given statement to the whole list.
+   
 ** Code
 #+BEGIN_SRC emacs-lisp
-
+(mapcar '1+ '(2 3 4))
 #+END_SRC
+
+#+RESULTS:
+| 3 | 4 | 5 |
+
+
 * Loop function
 ** Code
 #+BEGIN_SRC emacs-lisp
-
+(defvar y 1)
+(cl-loop for x from 2 to 10
+      y = (+ y x))
 #+END_SRC
+ haven't quite gotten it to work.
+#+RESULTS:
+: y

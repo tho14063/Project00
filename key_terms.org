@@ -127,6 +127,6 @@ Modus Ponens: method of affirming
 
 Modus Tollens: mode that denies by denying
 
-Elimination: valid argument form: 
+Elimination: valid argument form: if a is not related to b and b is related to c then a is not related to c
 
-Transitivity: Valid Argument form: 
+Transitivity: Valid Argument form: if a is related to b and b is related to c then a is related to c 

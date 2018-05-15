@@ -5,7 +5,12 @@
 #+STARTUP: showeverything entitiespretty
 #+SETUPFILE: ../theme-bigblow.setup
 
-** TODO WDT
+** DONE WDT
+   CLOSED: [2018-05-12 Sat 19:43]
+   :LOGBOOK:
+   CLOCK: [2018-05-12 Sat 19:40]--[2018-05-12 Sat 19:43] =>  0:03
+   CLOCK: [2018-05-12 Sat 19:12]--[2018-05-12 Sat 19:13] =>  0:01
+   :END:
   PVP the result of evaluating the following (paying special attention to the
   more-than-syntactic difference between the \lsquo{}starless\rsquo{} form of =let= and the
   \lsquo{}star-suffixed\rsquo{} form):
@@ -13,6 +18,9 @@
 #+BEGIN_SRC emacs-lisp
   (let ((a 1) (b 2) (c 3)) (+ a b c))
 #+END_SRC
+
+#+RESULTS:
+: 6
 
 #+BEGIN_SRC emacs-lisp
   (let ((a 1) (b 2) (c 3)) (+ a b c d))
@@ -22,9 +30,15 @@
   (let ((a 1) (b 2) (c 3)) [+ a b c d])
 #+END_SRC
 
+#+RESULTS:
+: [+ a b c d]
+
 #+BEGIN_SRC emacs-lisp
   (let ((a 1) (b 2) (c 3) (+ 4)) (+ a b c +))
 #+END_SRC
+
+#+RESULTS:
+: 10
 
 #+BEGIN_SRC emacs-lisp
   (makunbound 'a)
@@ -35,8 +49,18 @@
   (let* ((a 1) (b 2) (c 3) (d (+ a 4))) (+ a b c d))
 #+END_SRC
 
+#+RESULTS:
+: 11
+
 ***  Your answer goes here.
-** TODO TEJ
+6, no result, no result, 6, 11, ...
+
+
+** DONE TEJ
+   CLOSED: [2018-05-12 Sat 20:25]
+   :LOGBOOK:
+   CLOCK: [2018-05-12 Sat 19:43]--[2018-05-12 Sat 20:16] =>  0:33
+   :END:
   A function-as-association between elements of a domain and elements of a
   codomain, for \ldquo{}small\rdquo domains and codomains, inspired so-called \ldquo{}association
   lists\rdquo (or alists) and the =assoc= (and associated) functions.
@@ -71,7 +95,18 @@
   There are several variations of =assoc=. Find and give examples of using them.
 
 *** Your answer goes here.
-** TODO WFK
+rassoc
+assq
+alist-get
+rassq
+assoc-default
+copy-alist
+assq-delete-all
+rassq-delete-all
+
+
+** DONE WFK
+   CLOSED: [2018-05-12 Sat 20:41]
   In the function-as-map context, here is another interpretation:
 
   A \ldquo{}map\rdquo type (AKA associative array, AKA hashtable) is found in many
@@ -136,7 +171,13 @@
   =make-hash-table= call?
   
 *** Your answer goes here.
-** TODO TER
+the first line is all nil.
+
+** DONE TER
+   CLOSED: [2018-05-12 Sat 20:48]
+   :LOGBOOK:
+   CLOCK: [2018-05-12 Sat 20:43]--[2018-05-12 Sat 20:48] =>  0:05
+   :END:
   This exercise explores /looping/ versus /mapping/.
 
   What does the =morphify= function defined below do? Think about it, then PVP
@@ -172,7 +213,16 @@
   Explain how this version of =morphify= works.
   
 *** Your answer goes here.
-** TODO TGE
+    :LOGBOOK:
+    CLOCK: [2018-05-12 Sat 20:48]--[2018-05-12 Sat 20:48] =>  0:00
+    :END:
+the morphify function iterates through each item in the list passed through and passes that item
+ into the function passed in. In the example given it should lower case all of the words.
+** DONE TGE
+   CLOSED: [2018-05-12 Sat 21:06]
+   :LOGBOOK:
+   CLOCK: [2018-05-12 Sat 20:49]--[2018-05-12 Sat 20:58] =>  0:09
+   :END:
   Note the difference if -13 is used instead of 13 below:
 #+BEGIN_SRC emacs-lisp :results silent
   (defun compute-floor-the-hard-way (dividend divisor)
@@ -191,16 +241,49 @@
   Is the hard way correct?
   
 *** Your answer goes here.
-** TODO THP
+It works for positive numbers, but not for negative which is what I'm assuming the above 
+is asking us to do. I don't know what the four is for, or how the other numbers are obtained
+though.
+
+** DONE THP
+   CLOSED: [2018-05-14 Mon 10:36]
   Graph the floor and ceiling functions f(x) = \lfloor{}x\rfloor and f(x) = \lceil{}x\rceil for real
   number values of x in the interval [-5.0 .. 5.0].
   
 *** Your answer goes here.
-** TODO WKM
+     |   _
+     |  _
+     | _
+     |_
+     |
+-----+-----
+    _|
+   _ |
+  _  |
+ _   |
+_    |
+     | 
+
+     |    _
+     |   _
+     |  _
+     | _
+     |_
+-----+-----
+     |
+    _|
+   _ |
+  _  |
+ _   |
+** DONE WKM
+   CLOSED: [2018-05-14 Mon 10:44]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 Mon 10:37]--[2018-05-14 Mon 10:44] =>  0:07
+   :END:
   Which of these statements about floor and ceiling are correct, for any real
   number $x$ and any integers $n$ and $m$?
   1. $x - 1 < \lfloor{}x\rfloor \le x \le \lceil{}x\rceil < x + 1$.
-  2. $\lfloor{}-x\rfloor = -\lceil{}x\rceil$.
+  2. $\lfloor{}-x\rfloor = -\lceil{}x\rceil$. 
   3. $\lceil{}-x\rceil = -\lfloor{}x\rfloor$.
   4. $\lfloor{}x + n\rfloor = \lfloor{}x\rfloor + n$.
   5. $\lceil{}x + n\rceil = \lceil{}x\rceil + n$.
@@ -213,18 +296,42 @@
       0$ as in statement 8).
   
 *** Your answer goes here.
+1. false
+2. true
+3. true
+4. true
+5. true
+6. false
+7. false
+8. true
+9. false
+10.false
+ *All I can see are empty rectangles for the symbols so I'm guessing what they
+ are for most of them.
 ** TODO TIW
+   :LOGBOOK:
+   CLOCK: [2018-05-14 Mon 10:46]--[2018-05-14 Mon 10:47] =>  0:01
+   :END:
 
   Define the function \ldquo{}round to nearest integer\rdquo using the floor and ceiling
   functions, together with the \ldquo{}Iverson bracket\rdquo function. (A number whose
   fractional part is less than one-half should be rounded down, otherwise up.)
 
 ***  Your answer goes here.
+#+BEGIN_SRC elisp
+ (defun round-to-nearest-integer number
+
+#+END_SRC
 ** TODO TKG
   Explore the inverse of =assoc= via the functions =rassoc= and associates.
 
 ***  Your answer goes here.
-** TODO WOV
+** DONE WOV
+   CLOSED: [2018-05-14 Mon 16:41]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 Mon 16:38]--[2018-05-14 Mon 16:41] =>  0:03
+   CLOCK: [2018-05-14 Mon 16:10]--[2018-05-14 Mon 16:30] =>  0:20
+   :END:
   Identify the formula or rule that generates the terms of each sequence:
   1. =[7 14 21 28 35 42 49 56 63 70 ...]=
   2. =[7 11 15 19 23 27 31 35 39 43 ...]=
@@ -238,7 +345,21 @@
   10. =[2 3 5 7 11 13 17 19 23 29 ...]=
 
 ***  Your answer goes here.
-** TODO WQW
+1. y = 7 + 7x
+2. y = 7 + 4x
+3. y = 3 + x
+4. y = 1_2 + 1_2
+5. y = y_-1 + y_-2
+6. 
+7. y = y_-1 + y_-2
+8. y = 6x^2
+9. y = 6x^3
+10. all prime numbers.
+** DONE WQW
+   CLOSED: [2018-05-14 Mon 16:39]
+   :LOGBOOK:
+   CLOCK: [2018-05-14 Mon 16:30]--[2018-05-14 Mon 16:38] =>  0:08
+   :END:
   Classify the following lisp functions according as each is or is not a predicate:
   | Predicate? | Yes or No? |
   |------------+------------|
@@ -253,3 +374,14 @@
   | =oddp=     |            |
 
 ***  Your answer goes here. (Replicate the above table.)
+  | Predicate? | Yes or No? |
+  |------------+------------|
+  | =list=     | no         |
+  | =listp=    | yes        |
+  | =integerp= | yes        |
+  | =vector=   | no         |
+  | =vectorp=  | yes        |
+  | =symbolp=  | yes        |
+  | =zerop=    | yes        |
+  | =evenp=    | yes        |
+  | =oddp=     | yes        |
